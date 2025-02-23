@@ -8,4 +8,5 @@ versiones de Node.js cada vez que se lleva a cabo un *push* o *pull request* en 
 Coveralls, una herramienta que permite ir registrando un histórico de cubrimiento
 
 [![Tests](https://github.com/ULL-ESIT-INF-DSI-2425/coverage-coveralls-github-actions/actions/workflows/ci.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2425/coverage-coveralls-github-actions/actions/workflows/ci.yml)
-[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2425/coverage-coveralls-github-actions/badge.svg?branch=main)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2425/coverage-coveralls-github-actions?branch=main)
+
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2425/prct05-objects-classes-interfaces-IsmaelAF/badge.svg?branch=main)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2425/prct05-objects-classes-interfaces-IsmaelAF?branch=main)
