@@ -81,12 +81,12 @@ export class Combat {
     }
 }
 
-let pikachu = new Pokemon("pikachu", 40, 120, "electrico", 40, 30, 60, 100);
-let charmander = new Pokemon("charmander", 40, 120, "fuego", 20, 20, 60, 100);
+//let pikachu = new Pokemon("pikachu", 40, 120, "electrico", 40, 30, 60, 100);
+//let charmander = new Pokemon("charmander", 40, 120, "fuego", 20, 20, 60, 100);
 
-let combate = new Combat(pikachu, charmander); 
+//let combate = new Combat(pikachu, charmander); 
 
-console.log(combate.calcularAtaque(pikachu, charmander));
+//console.log(combate.calcularAtaque(pikachu, charmander));
 
 //let pokemon1 = new Pokemon("pokemon1", 40, 120, "hierba", 20, 40, 60, 210);
 //let pokemon2 = new Pokemon("pokemon2", 30, 100, "fuego", 20, 20, 12, 200);
@@ -98,33 +98,6 @@ console.log(combate.calcularAtaque(pikachu, charmander));
 //console.log(a.calcularAtaque(pokemon2, pokemon3));
 
 //a.calcularEfectividad(pokemon2, pokemon3);
-
-//efectividadPorTipos.forEach((element, index) => {
-//    element.forEach([a,d,e] => {
-//        console.log(`${a},${d},${e}`);
-        
-//    });
-//});
-
-
-//for (const elemento of efectividadPorTipos){
-//    for (const [at, df, ef] of elemento) {
-//        console.log(at, df, ef);
- //   }
-//}
-
-///efectividadPorTipos.forEach(element => {
- //   for(const [atacante, defensor, efec] of element){
- //       console.log(atacante, defensor, efec);
- //   }
-//});
-
-//efectividadPorTipos.forEach((element) => {
-//    console.log(`${element[0]}, ${element[1]}, ${element[2]}`);
-//});
-
-//let pokedex = new Pokedex([pokemon2, pokemon3]);
-
 
 
 // objeto de class Combat construido con dos contrincantes.

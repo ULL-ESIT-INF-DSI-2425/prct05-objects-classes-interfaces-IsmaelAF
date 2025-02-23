@@ -129,8 +129,10 @@ export class Pokedex {
 
 }
 
-let pikachu = new Pokemon("pikachu", 40, 120, "electrico", 40, 30, 60, 100);
-let pokedex = new Pokedex([pikachu]);
+
+
+//let pikachu = new Pokemon("pikachu", 40, 120, "electrico", 40, 30, 60, 100);
+//let pokedex = new Pokedex([pikachu]);
 
 //let charmander = new Pokemon("charmander", 40, 120, "fuego", 20, 30, 60, 100);
 
@@ -138,7 +140,7 @@ let pokedex = new Pokedex([pikachu]);
 
 //console.log(pokedex.showPokedex());
 
-pokedex.showPokedex()
+//pokedex.showPokedex()
 
 
 /*

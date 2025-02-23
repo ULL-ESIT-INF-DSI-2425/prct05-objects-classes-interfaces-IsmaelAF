@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
-import { Pokemon } from "../src/ejercicio-1/pokemon"
-import { tipoPokemon } from "../src/ejercicio-1/pokemon";
+import { Pokemon } from "../../src/ejercicio-1/pokemon"
+import { tipoPokemon } from "../../src/ejercicio-1/pokemon";
 
 let pikachu = new Pokemon("pikachu", 40, 120, "electrico", 40, 30, 60, 100);
 
