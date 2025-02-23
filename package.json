@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "basicFunctions.js",
   "scripts": {
+    "start": "tsc-watch",
     "dev": "tsc-watch --onSuccess \"node dist/basicFunctions.js\"",
     "doc": "typedoc",
     "test": "vitest run",
