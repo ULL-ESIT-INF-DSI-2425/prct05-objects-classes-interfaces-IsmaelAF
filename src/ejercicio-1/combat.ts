@@ -10,9 +10,19 @@ export const efectividadPorTipos : [tipoPokemon, tipoPokemon, number][] = [
 ];
 
 export class Combat {
+    /**
+     * Constructor para la clase Combat
+     * @param contrincante1 - Pokemon contrincante 1
+     * @param contrincante2 - Pokemon contrincante 2
+     */
     constructor(private contrincante1: Pokemon, private contrincante2: Pokemon){}
 
-
+    /**
+     * Método que calcula el Daño del ataque
+     * @param pokemonA - Pokemon atacante
+     * @param pokemonD - Pokemon defensor
+     * @returns - Daño del Atacante al Defensor
+     */
     calcularAtaque(pokemonA: Pokemon, pokemonD: Pokemon): number {
         let ataque: number = 0;
 
@@ -21,6 +31,12 @@ export class Combat {
         return ataque;
     }
 
+    /**
+     * Método que calcula la efectividad de un ataque
+     * @param tipoA - Tipo del Pokemon Atacante
+     * @param tipoD - Tipo del Pokemon Defensor
+     * @returns - Efectividad del ataque
+     */
     calcularEfectividad(tipoA: Pokemon, tipoD: Pokemon): number {
         let efectivo: number = 0;
 
@@ -31,13 +47,16 @@ export class Combat {
             if (tipoA.tipo === element[0] && tipoD.tipo === element[1]) {
                 efectivo = element[2];
             }
-            //console.log(`${element[0]}, ${element[1]}, ${element[2]}`);
         });
 
 
         return efectivo;
     }
 
+    /**
+     * Método que da comienzo al combate
+     * @returns - Ganador del combate
+     */
     start(): string {
 
         let ganador: string = "";

@@ -1,5 +1,8 @@
 export type tipoPokemon = 'fuego' | 'agua' | 'electrico' | 'hierba' ;
 
+/**
+ * Interfaz para los atributos de la clase Pokemon
+ */
 export interface datosPokemon {
     nombre: string;
     peso: number;
@@ -11,8 +14,20 @@ export interface datosPokemon {
     HP: number;
 }
 
+
 export class Pokemon implements datosPokemon{
 
+    /**
+     * Constructor para la clase Pokemon
+     * @param nombre - nombre del pokemon
+     * @param peso - peso del pokemon
+     * @param altura -altura del pokemon
+     * @param tipo - tipo del pokemon
+     * @param ataque - ataque del pokemon
+     * @param defensa - defensa del pokemon
+     * @param velocidad - velocidad del pokemon
+     * @param HP - vida del pokemon
+     */
     constructor(
         public readonly nombre: string, 
         public readonly peso: number, 
@@ -28,6 +43,10 @@ export class Pokemon implements datosPokemon{
         //}
     }
 
+    /**
+     * Metodo que muestra todas las estadisticas y atributos de un pokemon.
+     * @returns - Estadisticas y atributos de un pokemon.
+     */
     showStats(): string {
         return `Nombre: ${this.nombre}
         Peso: ${this.peso}

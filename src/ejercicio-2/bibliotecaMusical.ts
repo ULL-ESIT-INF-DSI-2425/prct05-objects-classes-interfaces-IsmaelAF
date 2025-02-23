@@ -4,8 +4,17 @@ import { Disco } from "./disco";
 
 export class BibliotecaMusical {
 
+    /**
+     * Constructor para la clase BibliotecaMusical
+     * @param artista - Lista de Artistas
+     */
     constructor(public artista: Artista[]){}
 
+    /**
+     * Método para añadir un artista a la Biblioteca
+     * @param artistaNuevo - Objeto de la Clase Artista
+     * @returns 
+     */
     addArtista(artistaNuevo: Artista): Boolean {
         let encontrado: Boolean = false;
 
@@ -24,6 +33,10 @@ export class BibliotecaMusical {
 
     }
 
+    /**
+     * Método para mostrar todo el contenido de la Biblioteca musical
+     * @returns - Todo el contenido en formato console.table
+     */
     informacion(): unknown[] {
         let table: unknown[] = [];
 
@@ -53,6 +66,11 @@ export class BibliotecaMusical {
         
     }
 
+    /**
+     * Metodo para filtrar artistas por nombre
+     * @param nombre - nombre del artista
+     * @returns Datos del artista encontrado en formato console.table
+     */
     buscarArtista(nombre: string): unknown[] {
         let table: unknown[] = [];
 
@@ -66,6 +84,11 @@ export class BibliotecaMusical {
         return table;
     }
 
+    /**
+     * Metodo para filtrar discos por nombre
+     * @param nombre - Nombre del disco
+     * @returns Datos del disco encontrado en formato console.table
+     */
     buscarDisco(nombre: string): unknown[] {
         let table: unknown[] = [];
 
@@ -81,6 +104,11 @@ export class BibliotecaMusical {
         return table;
     }
 
+    /**
+     * Metodo para filtrar canciones por nombre
+     * @param nombre - nombre de la cancion
+     * @returns - Datos de la cancion encontrada en formato console.table
+     */
     buscarCancion(nombre: string): unknown[] {
         let table: unknown[] = [];
 
@@ -98,6 +126,11 @@ export class BibliotecaMusical {
         return table;
     }
 
+    /**
+     * Método que devuelve el numero de canciones que hay en un disco
+     * @param nombre - nombre del disco
+     * @returns - numero de canciones en un disco
+     */
     numCancionesDisco(nombre:string):number | undefined {
         let result: number | undefined = undefined;
         let encontrado: boolean = false;
@@ -107,15 +140,20 @@ export class BibliotecaMusical {
                 if (nombre === element.nombre) {
                     encontrado = true;
                     result = element.canciones.length;
-                    //return element.canciones.length;
+                    
                 }
-                //console.log(element.canciones.length);
+               
             });
         });
         return encontrado ? result : undefined;
 
     }
 
+    /**
+     * Metodo que devuelve la duracion total de un disco
+     * @param nombre - nombre del disco
+     * @returns - duración total de todas las canciones del disco
+     */
     duracionDisco(nombre: string): number | undefined {
         let result: number = 0;
         let encontrado: boolean = false;
@@ -126,16 +164,20 @@ export class BibliotecaMusical {
                     discoP.canciones.forEach(element => {
                         result += element.duracion;
                     });
-                    //result += element.canciones;
-                    //return element.canciones.length;
+                    
                 }
-                //console.log(element.canciones.length);
+                
             });
         });
         return encontrado ? result : undefined;
 
     }
 
+    /**
+     * Metodo que devuelve las reproducciones totales de un disco
+     * @param nombre - nombre del disco
+     * @returns - reproducciones totales de todas las canciones de un disco
+     */
     reproduccionesDisco(nombre: string): number | undefined {
         let result: number = 0;
         let encontrado: boolean = false;
@@ -146,10 +188,9 @@ export class BibliotecaMusical {
                     discoP.canciones.forEach(element => {
                         result += element.reproducciones;
                     });
-                    //result += element.canciones;
-                    //return element.canciones.length;
+                    
                 }
-                //console.log(element.canciones.length);
+                
             });
         });
         return encontrado ? result : undefined;

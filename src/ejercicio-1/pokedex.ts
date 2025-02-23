@@ -2,33 +2,43 @@ import { Pokemon, datosPokemon } from "./pokemon";
 
 export class Pokedex {
 
+    /**
+     * Constructor para la clase Pokedex
+     * @param pokedex - Conjunto de pokemons
+     */
     constructor(public readonly pokedex: Pokemon[]){};
 
+    /**
+     * Añade un pokemon en la pokedex
+     * @param poke - Objeto de la clase Pokemon
+     */
     addPokemon(poke: Pokemon): void {
-        //if (this.buscarNombre)
+        
         if (this.buscarNombre(poke.nombre) === undefined) {
             this.pokedex.push(poke);
-        }// else {
-        //    console.log(poke.nombre,"ya existe en la Pokedex.");
-        //}
-        //this.pokedex.push(poke);
+        }
     }
 
+    /**
+     * Metodo que devuelve los atributos y estadisticas de todos los pokemons en la Pokedex
+     * @returns - showStats() de cada pokemon en la Pokedex.
+     */
     showPokedex(): string {
         let result: string = "";
 
-        //let contador:number  = 0;
         this.pokedex.forEach(element => {
             result += element.showStats();
-            //console.log("Pokemon nº",++contador);
-            //element.showStats();
-            //console.log("");
         });
 
         return result;
     }
 
-
+    /**
+     * Metodo que devuelve un array de Pokemons dependiendo del campo y dato que se introduzca
+     * @param campo - Nombre del campo de informacion
+     * @param data - Dato que ha de coincidir
+     * @returns - Lista de pokemons cuya estadística "campo" sea "data"
+     */
     buscarCampo(campo: string, data: string | number): Pokemon[] {
 
         let encontrados: Pokemon[] = [];
@@ -42,7 +52,7 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
             case "peso":
                 this.pokedex.forEach(element => {
@@ -51,7 +61,7 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
             case "altura":
                 this.pokedex.forEach(element => {
@@ -60,7 +70,7 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
             case "tipo":
                 this.pokedex.forEach(element => {
@@ -69,7 +79,7 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
             case "ataque":
                 this.pokedex.forEach(element => {
@@ -78,7 +88,7 @@ export class Pokedex {
                         encontrados.push(element);
                     }
                 });
-                //return encontrados;
+                
                 break;
             case "defensa":
                 this.pokedex.forEach(element => {
@@ -87,7 +97,7 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
             case "velocidad":
                 this.pokedex.forEach(element => {
@@ -96,7 +106,7 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
             case "HP":
                 this.pokedex.forEach(element => {
@@ -105,16 +115,17 @@ export class Pokedex {
                     }
 
                 });
-                //return encontrados;
+                
                 break;
-        
-            //default:
-                //console.log("Campo de información no existente.");
-                //break;
         }
         return encontrados;
     }
 
+    /**
+     * Metodo filtra por el campo nombre
+     * @param nombrePokemon - nombre de un Pokemon
+     * @returns - Pokemon que coincida con el nombre
+     */
     buscarNombre(nombrePokemon: string): Pokemon | undefined {
 
         let encontrado: Pokemon | undefined = undefined;
